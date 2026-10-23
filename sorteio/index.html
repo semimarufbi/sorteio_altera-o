@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sorteio</title>
+    <link href="sorteio.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <form onsubmit="adicionarParticipante(event);">
+        <label for="input_nome">Nome:</label>
+        <input type="text" id="input_nome" required minlength="2" />
+        <button type="submit" id="btn_adicionar">Adicionar</button>
+    </form>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>
+                        Nome <button type="button" id="btn_ordenar" onclick="alternarOrdenacao(event)">🔤</button>
+                    </td>
+                    <td>Ações</td>
+                </tr>
+            </thead>
+            <tbody id="lista">
+                <tr>
+                    <td colspan="3">Nenhum participante</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <button id="sortear" onclick="sortear()">Sortear</button>
+    </div>
+    <script src="sorteio.js"></script>
+</body>
+
+</html>
